@@ -1,0 +1,115 @@
+// FONT
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+$sitefont: "Figtree", sans-serif;
+
+// COLORS
+$Yellow: hsl(47, 88%, 63%); // or #f4d04e
+$White: hsl(0, 0%, 100%); 
+$Grey: hsl(0, 0%, 50%);
+$Black: hsl(0, 0%, 7%); // ir #121212
+* {
+    box-sizing: border-box;
+}
+:root {
+    font-family: $sitefont;
+    color: $Black;
+}
+
+body {
+    background-color: $Yellow;
+    height: 100vh;
+}
+
+main {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 1400px;
+}
+article {
+    display: flex;
+    flex-direction: column;
+    background-color: $White;
+    max-width: 384px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 24px;
+    box-shadow: 8px 8px $Black;
+    border: solid 1px $Black;
+    border-radius: 20px;
+
+    .blog-image, p {
+        margin-bottom: 12px;
+    }
+
+    &:hover {
+        box-shadow: 16px 16px;
+    }
+}
+
+figure {
+    margin: 0;
+}
+
+.blog-image {
+    img {
+        width: 100%;
+    }
+}
+.category {
+    padding: 4px 12px;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 800;
+    background: $Yellow;
+    width: fit-content;
+}
+
+.publish-date {
+    font-size: 14px;
+}
+
+.post-link {
+    font-size: 24px;
+    font-weight: 800;
+    text-decoration: none;
+    color: $Black;
+
+    &:hover {
+        color: $Yellow;
+    }
+}
+
+
+.post-description {
+    color: $Grey;
+    margin-top: 12px;
+}
+.avatar {
+    display: flex;
+
+    img {
+        width: 35px;
+    }
+        
+    figcaption {
+        margin-left: 12px;
+        font-size: 14px;
+        font-weight: 800;
+        align-self: center;
+    }
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    margin-top: 1rem;
+    a { color: hsl(228, 45%, 44%); }
+}
+
+@media only screen and (max-width: 400px) {
+    article {
+        max-width: 330px;
+    }
+}
